@@ -79,10 +79,19 @@ function Hi() {
 
     {(weather?.name)?
 
-      <div>
-        <div>Weather of {weather?.name}</div>
+     <center> <div>
+        <div>Weather of  {weather?.name}</div>
+        <br></br>
         <div>Current Temp {weather?.main?.temp}</div>
-      </div>
+        <br></br>
+        <div>Max Temp {weather?.main?.temp_max}</div>
+        <br></br>
+        <div>Min Temp {weather?.main?.temp_min}</div>
+        <br></br>
+        <div>Humidity {weather?.main?.humidity}</div>
+        <br></br>
+        <div>Wind Speed {weather?.wind?.speed}</div>
+      </div></center>
       :
       null
     }
