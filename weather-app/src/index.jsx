@@ -73,7 +73,7 @@ function Hi() {
      <b> <button  className='go'  type="submit">Get Weather</button></b>
 
     </form> </center></b> 
-<br></br>
+    <br></br><br></br>
     <br />
 
     {(weather?.name)?
