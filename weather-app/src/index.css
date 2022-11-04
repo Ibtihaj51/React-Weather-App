@@ -1,0 +1,22 @@
+body {
+    background-color: cadetblue;
+  }
+
+  .heading{
+    font-display: flex;
+    align-items: center;
+    font-size: 75px;
+    font-family: sans-serif;
+    font-style:normal;
+  }
+  .inbx{
+    font-size: 25px;
+  }
+  .go{
+    font-size: 25px;
+  }
+  .result{
+    font-size: 25px;
+    font-family:sans-serif;
+    font-style:normal;
+  }

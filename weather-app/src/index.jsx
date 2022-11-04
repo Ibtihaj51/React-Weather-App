@@ -1,8 +1,8 @@
+import "./index.css";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
 import axios from "axios";
-const API_KEY ='49cc8c821cd2aff9af04c9f98c36eb74';
 let num1 = 0;
 
 function Hi() {
@@ -35,8 +35,7 @@ function Hi() {
 
   useEffect(() => {
     const getWeather = () => { // get current weather 
-      axios.get(`https://api.openweathermap.org/data/2.5/onecall?
-      &exclude=hourly,minutely&units=metric&appid=${API_KEY}`)
+      axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Karachi&appid=e0f99c494c2ce394a18cc2fd3f100543&units=metric`)
         .then(function (response) {
 
           console.log("data: ", response.data);
@@ -57,13 +56,13 @@ function Hi() {
 
 
    
- <center><h1>
+ <center><h1 className='heading'>
      Weather App
     </h1> 
 
    <form onSubmit={submitHandler}>
 
-      <input
+      <input className='inbx'
         type="text"
         placeholder='City Name'
         onChange={(e) => {
@@ -71,7 +70,7 @@ function Hi() {
         }}
       />
 
-      <button type="submit">Get Weather</button>
+      <button className='go' type="submit">Get Weather</button>
 
     </form> </center>
 
@@ -80,17 +79,17 @@ function Hi() {
     {(weather?.name)?
 
      <center> <div>
-        <div>Weather of  {weather?.name}</div>
+        <div className='result'>Weather of  {weather?.name}</div>
         <br></br>
-        <div>Current Temp {weather?.main?.temp}</div>
+        <div className='result'>Current Temp {weather?.main?.temp}</div>
         <br></br>
-        <div>Max Temp {weather?.main?.temp_max}</div>
+        <div className='result'>Max Temp {weather?.main?.temp_max}</div>
         <br></br>
-        <div>Min Temp {weather?.main?.temp_min}</div>
+        <div className='result'>Min Temp {weather?.main?.temp_min}</div>
         <br></br>
-        <div>Humidity {weather?.main?.humidity}</div>
+        <div className='result'>Humidity {weather?.main?.humidity}</div>
         <br></br>
-        <div>Wind Speed {weather?.wind?.speed}</div>
+        <div className='result'>Wind Speed {weather?.wind?.speed}</div>
       </div></center>
       :
       null
