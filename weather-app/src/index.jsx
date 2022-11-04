@@ -56,9 +56,9 @@ function Hi() {
 
 
    
- <center><h1 className='heading'>
+ <b><center><h1 className='heading'>
      Weather App
-    </h1> 
+    </h1>
 
    <form onSubmit={submitHandler}>
 
@@ -70,15 +70,15 @@ function Hi() {
         }}
       />
 
-      <button className='go' type="submit">Get Weather</button>
+     <b> <button  className='go'  type="submit">Get Weather</button></b>
 
-    </form> </center>
-
+    </form> </center></b> 
+<br></br>
     <br />
 
     {(weather?.name)?
 
-     <center> <div>
+<b><center> <div>
         <div className='result'>Weather of  {weather?.name}</div>
         <br></br>
         <div className='result'>Current Temp {weather?.main?.temp}</div>
@@ -90,7 +90,7 @@ function Hi() {
         <div className='result'>Humidity {weather?.main?.humidity}</div>
         <br></br>
         <div className='result'>Wind Speed {weather?.wind?.speed}</div>
-      </div></center>
+      </div></center></b>
       :
       null
     }
